@@ -1,39 +1,8 @@
-<!-- Navigation -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          
-          <a href="http://www.biasthmawebinars.com" class="navbar-brand pull-left"><img src="http://www.streamingwell.tv/wp-content/uploads/2015/06/temp-biasthma-logo.png" width="225px" height="131px" alt="Boehringer Ingelheim Asthma Webinars"></a>
-
-        </div>
-          
-        <% if user_signed_in? %>
-        <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
-          <ul class="nav navbar-nav">
-            <li style="margin-top: 3px;"><%= link_to "Home", home_path %></li>
-            <li style="margin-top: 3px;"><%= link_to "Archive", archive_path %></li>
-            <li style="margin-top: 3px;"><%= link_to "Help Centre", help_path %></li>
-            <li style="margin-top: 3px;"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-            <li><%= link_to "Feedback", evaluation_path, class: 'btn btn-primary' %></li>
-            <li style="margin-top: 3px;"><img src="http://www.streamingwell.tv/wp-content/uploads/2015/06/BIL-Logo-white.png" width="125px" height="38px" style="margin: 10px 20px;" alt="Boehringer Ingelheim"></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-        <% else %>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li style="margin-top: 3px;"><%= link_to "Register", new_user_registration_path %></li>
-            <li style="margin-top: 3px;"><%= link_to "Login", login_path %></li>
-            <li style="margin-top: 3px;"><%= link_to "Help Centre", help_path %></li>
-            <li style="margin-top: 3px;"><%= link_to 'Forgotten your password?', new_password_path(resource_name) %></li>
-            <li style="margin-top: 3px;"><img src="http://www.streamingwell.tv/wp-content/uploads/2015/06/BIL-Logo-white.png" width="125px" height="38px" style="margin: 10px 20px;" alt="Boehringer Ingelheim"></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-        <% end %>
-      </div>
-    </div> <!-- / .navigation -->
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="orkambi-banner">
+      <small>This website is intended for United Kingdom healthcare professionals only. <br /> If you are taking a Vertex Pharmaceuticals (Europe) Ltd. medicine, please <a href="#" style="text-decoration: underline !important;">click here</a>.</small>
+    </div>
+  </div>
+</div>
+<%= render 'layouts/messages' %>

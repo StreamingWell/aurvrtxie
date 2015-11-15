@@ -8,7 +8,7 @@ class Feedback
                 :technical, :body, :comment, :future, :follow
 
   validates :lecture, :relevance, :info_presented, :likelihood_change,
-            :body, :technical, :future, :follow, presence: true
+            :body, :technical, presence: true
 
   def initialize(attributes = {})
     attributes.each do |name, value|

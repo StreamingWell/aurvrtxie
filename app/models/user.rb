@@ -1,23 +1,21 @@
 class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable#, :validatable
 
-  attr_accessible :name, :email, :company, :job, :password,
-                  :password_confirmation, :remember_me, :hcp, :nothcp, :reminder, :future
+  attr_accessible :firstname, :lastname, :email, :future
 
-  INVALID_EMAILS = %w(virginmedia.com ee.co.uk plus.net aol.com aol.co.uk sky.com tiscali.co.uk btinternet.com gmail.com googlemail.com hotmail.co.uk hotmail.com live.co.uk yahoo.com yahoo.co.uk yahoo.gr yahoo.fr outlook.com outlook.co.uk icloud.com ymail.com mail.com bigstring.com talktalk.co.uk groovygecko.com liquidproductions.co.uk )
-  validates_format_of :email,
-                      :without => /#{INVALID_EMAILS.map{|a| Regexp.quote(a)}.join('|')}/,
-                      :message => "Please register using your work email address."
+  VALID_EMAILS = %w(nhs.net, streamingwell.com, auroracomms.com, vrtx.com)
+   validates_format_of :email,
+                      :with =>  Regexp.new("#{VALID_EMAILS.join('|')}")
+    #                   :message => "Please register using your work email address."
 
-  after_create :send_user_and_admin_notification
+  after_create :send_admin_notification
 
-  def self.suitable_for_reminders
-    where(reminder: true)
-  end
+  #def self.suitable_for_reminders
+  #  where(reminder: true)
+  #end
 
   # Reminder emails
-
   def self.check_and_send_archive
     # should be sent on following dates
     # reminder_archive - sent nov 27th, jan 16, march 7
@@ -87,9 +85,8 @@ class User < ActiveRecord::Base
 
   private
 
-  	def send_user_and_admin_notification
+  	def send_admin_notification
       AdminMailer.registration_notification(self).deliver
-      UserMailer.welcome(self).deliver
   	end
 end
 

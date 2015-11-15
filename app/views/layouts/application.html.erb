@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Boehringer Ingelheim Asthma Webinars</title>
-    <meta name="description" content="Asthma Webinars..../* Ref: XXXXXXXXXX, Jun 2015">
+    <title>ORKAMBI™ (lumacaftor/ivacaftor) Webcast</title>
+    <meta name="description" content="">
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
@@ -10,29 +10,30 @@
     <!-- Cookie Script? -->
     <!-- <script src='http://ico-cookie-warning.googlecode.com/svn/trunk/ico_cookies.js'></script> -->
     <%= analytics_init if Rails.env.production? %>
+    <%= favicon_link_tag 'favicon.ico' %>
   </head>
   <body>
   
   <div class="wrapper">
-    <div class="intro-header">
-      <!-- <div class="container"> -->
-      <%= render 'layouts/header' %>
-      <%= render 'layouts/messages' %>
-
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="intro-message">
-            <%= yield %>
-          </div>
-        </div>
-      </div>
-
-        <!--</div> -->
-        <!-- /.container -->
-
-    </div>
-    <!-- /.intro-header -->
-  </div>
-    <!-- /.wrapper -->
+    <%= yield %>
+    <!-- Modal to report AE -->
+    <div class="modal fade" style="margin-top: 50px;" id="AEModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog" style="max-width: 500px; padding: 50px;">
+        <div class="modal-content">
+          <div class="modal-footer">
+            <%= link_to "X", root_path %>
+          </div><!-- /.modal-footer -->
+          <div class="modal-body" style="text-align:left;">
+            <h4>Reporting a suspected adverse event</h4>
+            <br />
+            <p>Any adverse event (AE), product complaint (PC) or other safety information associated with the use of a Vertex Pharmaceuticals Ltd. product should be reported to Vertex via phone +44 (0) 800 028 26116 or email <a href="mailto:vertexmedicalinfo@vrtx.com" style="text-decoration: underline !important;">vertexmedicalinfo@vrtx.com</a></p>
+            <p><span style="font-weight: 400;">Adverse event</span><span style="font-weight: 300;"> is defined as any untoward medical occurrence in a patient administered a pharmaceutical product which does not necessarily have a casual relationship with the treatment, including any unfavorable or unintended signs od symptoms or disease temporarily associated with the use of a medical product.</span></p>
+            <p><span style="font-weight: 400;">Product complaint</span><span style="font-weight: 300;"> is defined as any verbal or written communication of inquiry or dissatisfaction with the identity, strength, quality or purity of a released pharmaceutical product. In addition, suspected counterfeit/falsified product is considered a product complaint.</span></p>
+            <p><span style="font-weight: 400;">Other safety information</span> <span style="font-weight: 300;">are reports of misuse/abuse, overdose, off-label use, medication errors including potential errors, lack of efficacy, transmission of infectious agents, occupational exposure, any drug exposure (maternal or paternal) during pregnancy and/or breastfeeding, or any use of falsified/counterfeit product.</span></p>
+          </div><!-- /.modal-body -->
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+  </div><!-- /.wrapper -->
   </body>
 </html>

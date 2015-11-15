@@ -2,15 +2,10 @@
 </div>
 
 <div class="container">
-	<div class="blockquote-box clearfix col-md-12" align="left" style="margin-top: -75px;">
+	<div class="blockquote-box clearfix col-md-12" align="left">
 		
-		<div class="col-md-6">
-			<h3 style="color:#3787ad;">How to improve patient outcomes in asthma:
-			<br /><span style="font-weight: 200;">a webinar series</span></h3>
-			<p style="margin-right: 15px;">If you have forgotten your password, please request a new one here.</p>
-		</div>
-		<div class="col-md-6">
-			<p style="color:#3787ad; margin-top: 25px;">Forgotten your password?</p>
+		<div class="col-md-6" style="margin: 50px 0 50px 0;">
+			<h1>Forgotten your password?</h1>
 				<%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
 		    <%= f.input :email, :autofocus => true, label: "Email Address" %>
 				<br />
@@ -20,8 +15,6 @@
 			<% end %>
 			<br />
 		</div>
-		<div class="col-md-12">
-			<%= render 'layouts/sfooter' %>
-		</div>
 	</div>
 </div>
+<%= render 'layouts/footer' %>

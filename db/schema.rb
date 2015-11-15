@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150613150625) do
+ActiveRecord::Schema.define(:version => 20151020152308) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",              :default => "", :null => false
@@ -54,6 +54,8 @@ ActiveRecord::Schema.define(:version => 20150613150625) do
     t.boolean  "reminder"
     t.boolean  "nothcp"
     t.boolean  "future"
+    t.string   "firstname"
+    t.string   "lastname"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

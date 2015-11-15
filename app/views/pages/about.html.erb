@@ -1,0 +1,36 @@
+<% if user_signed_in? %>  
+<%= render 'layouts/header' %>
+<%= render 'layouts/orkambi' %>
+<section class="orkambi-about">
+  <p><strong>The webcast will be available from [day, date] <br /> December 2015 at [xxx].</strong></p>
+  <br />
+  <p>If you haven’t requested a diary reminder for the initial screening of<br /> the webcast and would like to do so, please click below.</p>
+  <br />
+  <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">REQUEST A DIARY REMINDER</a>
+  <p style="margin-top: 25px;"><strong>We look forward to welcoming you back soon.</strong></p>
+</section>
+<br />
+<%= render 'layouts/disclaimer' %>
+<%= render 'layouts/footer' %>
+
+<!-- Modal for calendar invite -->
+<div class="modal fade" style="margin-top: 200px;" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-footer">
+        <%= link_to "X", about_path %>
+      </div>
+      <div class="modal-body">
+        <h4>Please click on your calendar type</h4>
+        <br />
+        [INSERT ICONS AND LINKS]
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<% else %>
+
+<%= render 'layouts/landing' %>  
+
+<% end %>

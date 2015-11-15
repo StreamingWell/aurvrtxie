@@ -1,0 +1,30 @@
+<%= render 'layouts/cookies' %>
+<div class="landing-body">
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1" align="center">
+		 <h1 style="color: #fc6719;">In order to view this webcast, please confirm wheteher<br /> you are a healthcare professional residing in the<br /> United Kingdom.</h1>
+		 <br />
+	  </div>
+	  <div class="col-md-12" align="center" style="margin: 25px 0 50px 0;">
+		 <%= link_to 'YES', home_path, class: "btn btn-primary btn-large" %>
+		 <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">NO</a>
+	  </div>
+ </div>
+</div>
+<%= render 'layouts/prefooter' %>
+
+<!-- Modal to show if not a healthcare professional -->
+<div class="modal fade" style="margin-top: 100px;" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-footer">
+        <%= link_to "X", root_path %>
+      </div>
+      <div class="modal-body">
+        <p>As you are not a healthcare professional residing <br /> in the United Kingdom you are not permitted to <br />view this webcast.</p>
+        <br />
+        <p>If you are taking a Vertex Pharmaceuticals<br /> (Europe) Ltd. medicine, please <a href="#" style="text-decoration: underline !important;">click here</a>.</p>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -5,7 +5,8 @@ class ContactController < ApplicationController
   end
 
   def create
-    @user = current_user
+    #@user = current_user
+    @user = User.find_by_email params[:message][:email]
     @message = Message.new(params[:message])
 
     if @message.valid?
