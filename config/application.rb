@@ -76,6 +76,6 @@ module Openmicrosite
       :enable_starttls_auto => true
     }
 
-    config.action_mailer.default_url_options = { :host => "intense-sands-8284.herokuapp.com" }
+    config.action_mailer.default_url_options = { :host => "agile-ravine-6437.herokuapp.com" }
   end
 end
