@@ -1,3 +1,4 @@
+<% if user_signed_in? %>  
 <%= render 'layouts/header' %>  
 <%= render 'layouts/orkambi' %>  
 
@@ -18,7 +19,7 @@
         <div class="col-md-6 col-md-offset-3">
             <!-- flash_notice to show if form submission is successful -->
             <div class="alert alert-success" id="form-success" style="display: none; margin-top: 15px; margin-bottom: 0px;">
-                <strong>Thank you, your question was successfully sent.</strong>
+                <strong>Thank you for submitting your question(s).<br /> A Vertex representative will follow up with you as soon as possible.</strong>
             </div>
             <!-- flash_notice to show if form submission is unsuccessful -->
             <div class="alert alert-error" id="form-error" style="display: none; margin-top: 15px; margin-bottom: 0px;">
@@ -40,4 +41,10 @@
 <br />
 
 <%= render 'layouts/disclaimer' %>
-<%= render 'layouts/footer' %>  
+<%= render 'layouts/footer' %>
+
+<% else %>
+
+<%= render 'layouts/landing' %>  
+
+<% end %>  
