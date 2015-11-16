@@ -4,10 +4,10 @@ class User < ActiveRecord::Base
 
   attr_accessible :firstname, :lastname, :email, :future
 
-  VALID_EMAILS = %w(nhs.net, streamingwell.com, auroracomms.com, vrtx.com)
+  VALID_EMAILS = ['nhs.net', 'streamingwell.com', 'auroracomms.com', 'vrtx.com']
    validates_format_of :email,
-                      :with =>  Regexp.new("#{VALID_EMAILS.join('|')}")
-    #                   :message => "Please register using your work email address."
+                      :with =>  Regexp.new("#{VALID_EMAILS.join('|')}"),
+                      :message => "Please register using your work email address."
 
   after_create :send_admin_notification
 

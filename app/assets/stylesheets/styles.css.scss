@@ -162,7 +162,7 @@ ul, menu, dir {
     background-image: none;
     border: 2px solid transparent;
     white-space: nowrap;
-    padding: 10px 80px;
+    padding: 10px 15px;
     line-height: 1.42857;
     border-radius: 0px;
     letter-spacing: 0.2em;
@@ -540,31 +540,16 @@ ul, menu, dir {
     padding: 25px 100px 25px 100px;
 }
 
-.register {
-
-}
-
-.register a {
-    color: rgb(252,103,25) !important;
-}
-
-.orkambi-branding {
-    padding: 0;
+.orkambi-brand {
+    padding: 25px 100px 25px 100px;
     background-image: url(http://www.streamingwell.tv/wp-content/uploads/2015/11/orkambi-logo-lg.png);
     background-position: right bottom; /*Positioning*/
     background-repeat: no-repeat; /*Prevent showing multiple background images*/
 }
 
-.orkambi-branding-body {
-    padding: 50px 75px 75px 75px;
-    background-position: right bottom; /*Positioning*/
-    background-repeat: no-repeat; /*Prevent showing multiple background images*/
-    /* background-color: rgba(255, 255, 255, 0.9); */
-}
-
 .orkambi-about{
     background-color: #efeeee;
-    padding: 50px 75px 50px 75px;
+    padding: 50px 100px 50px 100px;
     text-align: center;
     color: #0aa5b5 !important;
 }
@@ -608,6 +593,7 @@ ul, menu, dir {
     text-align: center;
     color: #fff;
     margin-top: -10px;
+    padding: 0 35px;
 }
 
 .modal-footer {

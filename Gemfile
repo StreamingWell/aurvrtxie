@@ -20,6 +20,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'quiet_assets'
   gem 'letter_opener'
+  gem 'byebug'
 end
 
 group :assets do

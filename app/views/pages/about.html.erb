@@ -1,15 +1,18 @@
 <% if user_signed_in? %>  
 <%= render 'layouts/header' %>
 <%= render 'layouts/orkambi' %>
-<section class="orkambi-about">
-  <p><strong>The webcast will be available from [day, date] <br /> December 2015 at [xxx].</strong></p>
-  <br />
-  <p>If you haven’t requested a diary reminder for the initial screening of<br /> the webcast and would like to do so, please click below.</p>
-  <br />
-  <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">REQUEST A DIARY REMINDER</a>
-  <p style="margin-top: 25px;"><strong>We look forward to welcoming you back soon.</strong></p>
-</section>
-<br />
+<div class="orkambi-about">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h4><strong>The webcast will be available from [day, date] <br /> December 2015 at [xxx].</strong></h4>
+      <br />
+      <p>If you haven’t requested a diary reminder for the initial screening of<br /> the webcast and would like to do so, please click below.</p>
+      <br />
+      <a data-toggle="modal" href="#myModal" class="btn btn-primary">REQUEST A DIARY REMINDER</a>
+      <h4 style="margin-top: 25px;"><strong>We look forward to welcoming you back soon.</strong></h4>  
+    </div>
+  </div>
+</div>
 <%= render 'layouts/disclaimer' %>
 <%= render 'layouts/footer' %>
 
@@ -23,7 +26,20 @@
       <div class="modal-body">
         <h4>Please click on your calendar type</h4>
         <br />
-        [INSERT ICONS AND LINKS]
+        <div class="row">
+          <div class="col-sm-4" style="text-align:center; margin-bottom:10px;">
+            <a href="#"><img src="http://www.streamingwell.tv/wp-content/uploads/2015/11/outlook-logo.png"/>
+            <p style="font-weight: 300; margin-top:5px;">Add to Outlook™ calendar</p></a>
+          </div>
+          <div class="col-sm-4" style="text-align:center; margin-bottom:10px;">
+            <a href="#"><img src="http://www.streamingwell.tv/wp-content/uploads/2015/11/google-logo.png"/>
+            <p style="font-weight: 300; margin-top:5px;">Add to Google™ calendar</p></a>
+          </div>
+          <div class="col-sm-4" style="text-align:center; margin-bottom:10px;">
+            <a href="#"><img src="http://www.streamingwell.tv/wp-content/uploads/2015/11/ical.png"/>
+            <p style="font-weight: 300; margin-top:5px;">Add to iCal<sup>©</sup><br /> calendar</p></a>            
+          </div>
+        </div>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

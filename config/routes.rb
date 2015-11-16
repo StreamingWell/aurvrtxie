@@ -1,15 +1,11 @@
 Openmicrosite::Application.routes.draw do
 
   # Home
-  root :to => 'pages#landing'
-  #root :to => 'pages#coming_soon'
-
-  # Live Webinar
-  #root :to => 'pages#live'
+  root :to => 'pages#about'
 
   # Authentication
-  devise_for :admins
-  devise_for :users
+  #devise_for :admins
+  devise_for :users, controllers: { sessions: "sessions" }
 
   # Static pages
   get 'landing' => 'pages#landing'

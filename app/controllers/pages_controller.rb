@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
    #remove this before deploying to production
-   #before_filter :authenticate
+   before_filter :authenticate
 
   def home
   end
@@ -17,12 +17,12 @@ class PagesController < ApplicationController
     @feedback = Feedback.new
   end
 
-  #protected
+  protected
 
-   # def authenticate
-  	#  authenticate_or_request_with_http_basic do |username, password|
-  	#  username == "admin" && password == "simon5343"
-  	# end
-   # end
+    def authenticate
+  	  authenticate_or_request_with_http_basic do |username, password|
+  	  username == "admin" && password == "belfast"
+  	 end
+    end
 
 end
