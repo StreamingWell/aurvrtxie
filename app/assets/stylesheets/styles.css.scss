@@ -28,7 +28,7 @@ html, body {
     color: #4d4d4d;
     margin:0;
     padding:0;
-    height:100%;
+    height: 100% !important;
     width: 100%;
     background-color: #fff;
 }
@@ -312,6 +312,7 @@ ul, menu, dir {
     background-color: #424244;
     bottom:0;
     width:100%;
+    height: 200px;
 }
 
 .footerlinks{
@@ -354,19 +355,18 @@ ul, menu, dir {
 }
 
 
-/* Sticky footer styles
+/* Sticky footer
 -------------------------------------------------- */
 
-/* Wrapper for page content to push down footer */
 .wrapper {
-    min-height:100%;
-    position:relative;
+    min-height: 100% !important;
+    height: auto !important;
+    height: 100% !important;
+    margin: 0 auto -200px !important;
 }
 
-/* Set the fixed height of the footer here */
 .footer, .push {
-    height: 5em;
-    clear: both;
+    height: 200px !important;
 }
 
 /* Alert Notices on Live Webcast page-break-inside: */
