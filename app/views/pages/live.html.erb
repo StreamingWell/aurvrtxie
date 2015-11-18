@@ -31,7 +31,10 @@
             <br />
             <%= form.input "email", as: :hidden, :input_html =>  {value: current_user.email} %>
             <p align="left">For medical information requests at any time, please email Vertex at <br /> <a href="mailto:vertexmedicalinfo@vrtx.com" style="text-decoration: underline !important">vertexmedicalinfo@vrtx.com</a>.</p>
-            <%= form.submit "Submit", class: 'btn btn-inverse btn-large' %>
+            <br />
+            <div class="col-md-4 col-md-offset-4">
+                <%= form.submit "Submit", class: 'btn btn-inverse btn-large btn-block' %>
+            </div>
             
             <% end %>
             </div>
