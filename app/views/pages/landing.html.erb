@@ -1,20 +1,24 @@
-<%= render 'layouts/cookies' %>
-<div class="landing-body">
-  <div class="container">
-    <div class="col-md-10 col-md-offset-1" align="center">
-     <h1 style="color: #fc6719;">In order to view this webcast, please confirm wheteher<br /> you are a healthcare professional residing in the<br /> Republic of Ireland.</h1>
-     <br />
-    </div>
-    <div class="col-md-12" align="center" style="margin: 25px 0 50px 0;">
-      <div class="col-sm-3 col-sm-offset-3">
-        <%= link_to 'YES', home_path, class: "btn btn-primary btn-large btn-block" %>
+<div id="wrapperlanding">
+  <%= render 'layouts/cookies' %>
+    <div class="landing-body">
+      <div class="container">
+        <div class="col-md-10 col-md-offset-1" align="center">
+         <h1 style="color: #fc6719;">In order to view this webcast, please confirm wheteher<br /> you are a healthcare professional residing in the<br /> Republic of Ireland.</h1>
+         <br />
+        </div>
+        <div class="col-md-12" align="center" style="margin: 25px 0 50px 0;">
+          <div class="col-sm-3 col-sm-offset-3">
+            <%= link_to 'YES', home_path, class: "btn btn-primary btn-large btn-block" %>
+          </div>
+          <div class="col-sm-3">
+            <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large btn-block">NO</a>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-3">
-        <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large btn-block">NO</a>
-      </div>
     </div>
-  </div>
-</div>
+  <div id="push"></div> <!-- push -->
+</div> <!-- wrapper -->
+
 <%= render 'layouts/prefooter' %>
 
 <!-- Modal to show if not a healthcare professional -->

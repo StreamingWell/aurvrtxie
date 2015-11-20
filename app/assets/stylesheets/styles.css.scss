@@ -27,10 +27,57 @@ html, body {
     font-family: 'Open Sans', sans-serif;   
     color: #4d4d4d;
     margin:0;
-    padding:0;
     height:100%;
     width: 100%;
     background-color: #fff;
+}
+
+body {
+    display: table;
+}
+
+#footer{
+    padding: 50px;
+    margin: 0;
+    background-color: #424244;
+}
+
+#footer-expanded { 
+    height: 100%; 
+}
+
+.footerlinks{
+    margin-bottom: 25px;
+}
+
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -300px;
+}
+
+#footer, #push {
+    min-height: 300px;
+}
+
+#footerlanding{
+    padding: 75px 50px;
+    margin: 0;
+    background-color: #424244;
+    height:100%;
+    width:100%;
+}
+
+#wrapperlanding {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -250px;
+}
+
+#footerlanding, #push {
+    height: 250px;
 }
 
 p {
@@ -273,7 +320,6 @@ ul, menu, dir {
 .disclaimer {
     width: 100%;
     margin-bottom: -25px;
-    margin-top: 0px;
     padding: 25px 0 25px;
     background-repeat: no-repeat;
     /* border-bottom: solid 6px; */
@@ -284,39 +330,6 @@ ul, menu, dir {
     background-size: cover;
 }
 
-
-
-.title-header-1 {
-    /* background-color: #F5F5F5; */
-    background-image: url(http://www.streamingwell.tv/wp-content/uploads/2015/06/bicycle-1400.jpg);
-    color: #00365C;
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-bottom: 0px;
-    margin-top: -25px;
-    padding-top: 150px;
-    padding-bottom: 150px;
-    background-repeat: no-repeat;
-    border-bottom: solid 6px;
-    border-color: #afcfde;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-#footer{
-    padding: 50px;
-    margin: 0;
-    background-color: #424244;
-    bottom:0;
-    width:100%;
-}
-
-.footerlinks{
-    margin-bottom: 25px;
-}
 
 
 .img-circle {
@@ -351,22 +364,6 @@ ul, menu, dir {
     height: 100%;
     /* background: url('#') no-repeat scroll center center / cover transparent; */
     border-bottom: none;
-}
-
-
-/* Sticky footer styles
--------------------------------------------------- */
-
-/* Wrapper for page content to push down footer */
-.wrapper {
-    min-height:100%;
-    position:relative;
-}
-
-/* Set the fixed height of the footer here */
-.footer, .push {
-    height: 5em;
-    clear: both;
 }
 
 /* Alert Notices on Live Webcast page-break-inside: */
