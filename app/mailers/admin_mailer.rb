@@ -5,7 +5,7 @@ class AdminMailer < ActionMailer::Base
 
   def registration_notification(user)
     @user = user
-    mail(subject: "New Registration on Orkambi UK")
+    mail(subject: "New Registration on Orkambi IE")
   end
 
 end

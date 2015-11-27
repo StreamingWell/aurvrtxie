@@ -1,7 +1,7 @@
 Openmicrosite::Application.routes.draw do
 
   # Home
-  root :to => 'pages#about'
+  root :to => 'pages#webcast'
 
   # Authentication
   #devise_for :admins
@@ -12,9 +12,9 @@ Openmicrosite::Application.routes.draw do
   get 'home' => 'pages#home'
   get 'register' => 'pages#register'
   get 'about' => 'pages#about'
-  get 'pi' => 'pages#pi'
-  get 'live' => 'pages#live'
-  get 'login' => 'pages#login'
+  get 'api' => 'pages#api'
+  get 'webcast' => 'pages#webcast'
+  get 'alreadyregistered' => 'pages#alreadyregistered'
   get 'help' => 'pages#help'
   get 'privacy' => 'pages#privacy'
   get 'terms' => 'pages#terms'

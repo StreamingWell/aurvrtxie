@@ -124,6 +124,10 @@ ul, menu, dir {
     -webkit-padding-start: 0px;
 }
 
+li {
+    list-style-position:inside !important;
+}
+
 /* Typography */
 
 .no-click {
@@ -201,8 +205,8 @@ ul, menu, dir {
     display: inline-block;
     margin: 5px 0 5px 0;
     font-family: 'Open Sans', sans-serif;   
-    font-size: 12px;
-    font-weight: normal;
+    font-size: 16px;
+    font-weight: 600;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
@@ -560,9 +564,9 @@ ul, menu, dir {
 
 .orkambi-brand {
     padding: 25px 50px 25px 50px;
-    background-image: url(http://www.streamingwell.tv/wp-content/uploads/2015/11/orkambi-logo-lg.png);
-    background-position: right bottom; /*Positioning*/
-    background-repeat: no-repeat; /*Prevent showing multiple background images*/
+    /*background-image: url(http://www.streamingwell.tv/wp-content/uploads/2015/11/orkambi-logo-lg.png); */
+    /* background-position: right bottom; /*Positioning*/
+    /* background-repeat: no-repeat; /*Prevent showing multiple background images*/ 
 }
 
 .orkambi-about{
@@ -575,14 +579,14 @@ ul, menu, dir {
 .orkambi-video{
     background-color: #efeeee;
     padding: 0;
-    text-align: center;
+    text-align: left;
     color: #0aa5b5 !important;
 }
 
 .orkambi-question{
     background-color: #0aa5b5;
-    padding: 50px 75px 50px 75px;
-    text-align: center;
+    padding: 50px 100px 75px;
+    text-align: left;
     color: #fff !important;
 }
 

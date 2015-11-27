@@ -1,9 +1,9 @@
 <%= render 'layouts/header' %>
 <div class="orkambi-body">
   <div class="row">
-    <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-8 col-md-offset-2">
       <h1 style="color:#fc6719; margin-top: 25px;"><strong>Register</strong></h1>
-      <p>To register to watch this webcast, please complete the following information:</p>
+      <p>Please complete the following information:</p>
       <br />
     <div>
   </div>
@@ -11,28 +11,28 @@
     <div class="col-md-12">
       <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
         <div class="row">
-          <div class="col-md-6">
-            <%= f.input :firstname, :autofocus => false, placeholder: "First Name*", label: false, :input_html => { style: "display: block;margin-bottom:15px;width: 100%;height: 54px;padding: 6px 12px;font-size: 18px;line-height: 1.42857143;color: #555;background-color: #e6f6f7;background-image: none;border: 3px solid #e9e9e9;border-radius: 4px !important;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);box-shadow: inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;" } %>
+          <div class="col-sm-6">
+            <%= f.input :firstname, :autofocus => false, placeholder: "First name*", label: false, :input_html => { style: "display: block;margin-bottom:15px;width: 100%;height: 54px;padding: 6px 12px;font-size: 18px;line-height: 1.42857143;color: #555;background-color: #e6f6f7;background-image: none;border: 3px solid #e9e9e9;border-radius: 4px !important;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);box-shadow: inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;" } %>
           </div>
-          <div class="col-md-6">
+          <div class="col-sm-6">
             <%= f.input :lastname, :autofocus => false, placeholder: "Last name*", label: false, :input_html => { style: "display: block;margin-bottom:15px;width: 100%;height: 54px;padding: 6px 12px;font-size: 18px;line-height: 1.42857143;color: #555;background-color: #e6f6f7;background-image: none;border: 3px solid #e9e9e9;border-radius: 4px !important;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);box-shadow: inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;" } %>
           </div>
         </div>
       </div>
     </div>
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-sm-12">
             <%= f.input :email, :autofocus => false, placeholder: "Email address*", label: false, :input_html => { style: "display: block;width: 100%;height: 54px;padding: 6px 12px;font-size: 18px;line-height: 1.42857143;color: #555;background-color: #e6f6f7;background-image: none;border: 3px solid #e9e9e9;border-radius: 4px !important;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);box-shadow: inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;" } %>
             <small>*required information</small>
           </div>
         </div>
       <hr style="border-color: #fff;">          
-      <%= f.input :future, :as => :boolean, label: false, :input_html => { :checked => "unchecked", style: "margin-left: 0px; margin-top: 0px;" } %><p style="margin: -32.5px 0 0 25px;">Please tick this box if you are happy for Vertex Pharmaceuticals (Europe) Ltd. to contact you<br /> in the future regarding other similar activities.</p>
+      <%= f.input :future, :as => :boolean, label: false, :input_html => { :checked => "unchecked", style: "margin-left: 0px; margin-top: 0px;" } %><p style="margin: -32.5px 0 0 25px;">Awaiting updated copy for permission for future contact</p>
       <hr style="border-color: #fff;">      
-      <small>Vertex Pharmaceuticals (Europe) Ltd. values and respects your privacy. Your email address will only be used for registration, login<br /> and diary reminder purposes (if you opt-in on this registration form), and will be stored in the company’s secure database. Vertex<br/> Pharmaceuticals (Europe) Ltd. will not share your email address with any third parties.</small>  
+      <small>Vertex Pharmaceuticals (Europe) Ltd. values and respects your privacy. Your email address will be used for registration and login purposes only and will be stored in the company's secure database. Vertex Pharmaceuticals (Europe) Ltd. will not share your email address with any third parties.</small>  
       <br />     
-      <fieldset class="col-md-2" style="padding: 0; margin-top: 25px;">
-        <%= f.button :submit, "SUBMIT", class: 'btn btn-primary btn-large btn-block' %>
+      <fieldset class="col-md-4" style="padding: 0; margin-top: 25px;">
+        <%= f.button :submit, "ACCESS WEBCAST", class: 'btn btn-primary btn-large btn-block' %>
       </fieldset>
       <% end %>
     </div>

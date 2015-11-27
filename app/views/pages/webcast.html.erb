@@ -1,0 +1,50 @@
+<% if user_signed_in? %>  
+<%= render 'layouts/header' %>  
+<%= render 'layouts/orkambi' %> 
+<div class="orkambi-brand">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2" style="background-color: #fff;">
+
+        <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe src="//fast.wistia.net/embed/iframe/171an9arma?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%"></iframe></div></div>
+        <script src="//fast.wistia.net/assets/external/E-v1.js" async></script>
+        
+        <!-- flash_notice to show if form submission is successful -->
+        <div class="alert alert-success" id="form-success" style="display: none; margin-top: 15px; margin-bottom: 0px;">
+            <strong>Thank you, your question was successfully sent.</strong>
+        </div>
+        <!-- flash_notice to show if form submission is unsuccessful -->
+        <div class="alert alert-error" id="form-error" style="display: none; margin-top: 15px; margin-bottom: 0px;">
+            <strong>Please fill in all fields.</strong>
+        </div>
+        <%= simple_form_for @message, :url => contact_path, method: :post, remote: true, html: { class: "form-horizontal"} do |form| %>
+        <br />
+        <%= form.input :body, label: false, placeholder: "If you have any questions on the clinical data you are invited to submit these in the box below and they be followed up by a Vertex representative as soon as possible.", required: false, as: :text, input_html: { rows: "6", style: "display: block;margin-bottom:15px;width: 100%;padding: 6px 12px;line-height: 1.42857143;color: #555;background-color: #fff;background-image: none;border: 3px solid #0aa5b5;border-radius: 4px !important;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);box-shadow: inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;" } %>
+
+        <br />
+        <p align="left">In order to help us follow up with you, please let us know which hospital/institution you are from.</p>
+        
+        <%= form.input :hospital, :autofocus => false, placeholder: "Hospital/institution*", label: false, :input_html => { style: "display: block;margin-bottom:0;width: 100%;height: 54px;padding: 6px 12px;line-height: 1.42857143;color: #555;background-color: #fff;background-image: none;border: 3px solid #0aa5b5;border-radius: 4px !important;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);box-shadow: inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;" } %>
+            <small>*required information</small>
+            <p></p>
+            <br />
+        
+        <%= form.input "email", as: :hidden, :input_html =>  {value: current_user.email} %>
+        
+        <div class="col-md-4" style="padding:0px;">
+            <%= form.submit "SUBMIT", class: 'btn btn-primary btn-large btn-block' %>
+        </div>
+        
+        <% end %>
+    </div>
+  </div>
+</div> 
+<br />
+
+<%= render 'layouts/disclaimer' %>
+<%= render 'layouts/footer' %>  
+
+<% else %>
+
+<%= render 'layouts/landing' %>  
+
+<% end %>

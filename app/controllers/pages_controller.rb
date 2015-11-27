@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   def home
   end
 
-  def live
+  def webcast
     @message = Message.new
   end
   
@@ -20,9 +20,9 @@ class PagesController < ApplicationController
   protected
 
     def authenticate
-  	  authenticate_or_request_with_http_basic do |username, password|
-  	  username == "admin" && password == "belfast"
-  	 end
+      authenticate_or_request_with_http_basic do |username, password|
+      username == "admin" && password == "belfast"
+     end
     end
 
 end
