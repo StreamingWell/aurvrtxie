@@ -1,13 +1,20 @@
 class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable#, :validatable
+         :recoverable, :rememberable, :timeoutable, :trackable#, :validatable
 
   attr_accessible :firstname, :lastname, :email, :future
 
-  VALID_EMAILS = ['nhs.net', 'streamingwell.com', 'auroracomms.com', 'vrtx.com']
-   validates_format_of :email,
-                      :with =>  Regexp.new("#{VALID_EMAILS.join('|')}"),
-                      :message => "Please register using your work email address."
+  validates :firstname, :lastname, :email, :presence => true
+
+  #VALID_EMAILS = ['nhs.net', 'streamingwell.com', 'auroracomms.com', 'vrtx.com']
+  # validates_format_of :email,
+  #                    :with =>  Regexp.new("#{VALID_EMAILS.join('|')}"),
+  #                    :message => "Please register using your work email address."
+
+  INVALID_EMAILS = %w( groovygecko.com liquidproductions.co.uk )
+  validates_format_of :email,
+                      :without => /#{INVALID_EMAILS.map{|a| Regexp.quote(a)}.join('|')}/,
+                      :message => "Please enter your email address."
 
   after_create :send_admin_notification
 
