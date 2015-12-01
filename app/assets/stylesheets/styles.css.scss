@@ -39,7 +39,7 @@ body {
 #footer{
     padding: 50px;
     margin: 0;
-    background-color: #424244;
+    background-color: #424244;    
 }
 
 #footer-expanded { 
@@ -54,7 +54,7 @@ body {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -300px;
+    margin: 0 auto -375px;
 }
 
 #footer, #push {
@@ -260,7 +260,6 @@ li {
     color: #fff;
     background-color: transparent;
     border-color: #ffffff;
-    padding: 5px 40px;
 }
 
 .btn-inverse:hover {
@@ -585,7 +584,7 @@ li {
 
 .orkambi-question{
     background-color: #0aa5b5;
-    padding: 50px 100px 75px;
+    padding: 50px 75px 75px;
     text-align: left;
     color: #fff !important;
 }
@@ -640,8 +639,8 @@ li {
 #cookie-bar .cb-enable:hover {background:#009900;}
 #cookie-bar .cb-disable {background:#990000;}
 #cookie-bar .cb-disable:hover {background:#bb0000;}
-#cookie-bar .cb-policy {color:#ffffff; font-weight: 500;}
-#cookie-bar .cb-policy:hover {color:#ffffff; font-weight: 500;}
+#cookie-bar .cb-policy {color:#ffffff; font-weight: 500; text-align: right !important;}
+#cookie-bar .cb-policy:hover {color:#ffffff; font-weight: 500; text-align: right !important;}
 
 #cookie-bar .cb-enable  {
     color: #fff;
