@@ -628,19 +628,19 @@ li {
     padding: 15px 15px 15px;
     color: #ffffff;
     margin: 0px;
-    text-align: center;
     font-weight: 300 !important;
     width: 100%;
 }
+
 #cookie-bar.fixed {position:fixed; top:0; left:0; width:100%;}
 #cookie-bar.fixed.bottom {bottom:0; top:auto;}
-#cookie-bar p {margin:0; padding:0;}
+#cookie-bar p {margin:0; padding:0; text-align: center; }
 #cookie-bar a {color:#ffffff; display:inline-block; border-radius:0; text-decoration:none; padding:0; margin-left:8px;}
 #cookie-bar .cb-enable:hover {background:#009900;}
 #cookie-bar .cb-disable {background:#990000;}
 #cookie-bar .cb-disable:hover {background:#bb0000;}
-#cookie-bar .cb-policy {color:#ffffff; font-weight: 500; text-align: right !important;}
-#cookie-bar .cb-policy:hover {color:#ffffff; font-weight: 500; text-align: right !important;}
+#cookie-bar .cb-policy {color:#ffffff; font-weight: 500;}
+#cookie-bar .cb-policy:hover {color:#ffffff; font-weight: 500;}
 
 #cookie-bar .cb-enable  {
     color: #fff;
@@ -667,4 +667,9 @@ li {
     border-radius: 0;
     padding: 5px 40px;
     margin-left: 10px;
+}
+
+.main-search {
+    float: left;
+    overflow: hidden;
 }
