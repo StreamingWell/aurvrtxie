@@ -301,6 +301,30 @@ li {
     padding: 5px 40px;
 }
 
+.btn-logout {
+    color: #fff;
+    background-color: transparent;
+    border-color: #ffffff;
+    padding: 5px 40px;
+    margin-top: -7.5px;
+}
+
+.btn-logout:hover {
+    color: #fff;
+    background-color: transparent;
+    border-color: #ffffff;
+    padding: 5px 40px;
+    margin-top: -7.5px;
+}
+
+.btn-logout:focus {
+    color: #fff;
+    background-color: transparent;
+    border-color: #ffffff;
+    padding: 5px 40px;
+    margin-top: -7.5px;
+}
+
 .jumbotron {
     background-color: transparent;
     color: #00365C;
