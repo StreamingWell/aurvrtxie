@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require jquery.cookiebar.js
-//= require jquery.placeholder.js
+//= require placeholder
 //= require magnific-popup
 
 
