@@ -4,10 +4,16 @@ class PagesController < ApplicationController
    before_filter :authenticate
 
   def home
+    if params[:choice] == 'yes'
+      cookies.permanent[:user_choice] = 'yes'
+    end
   end
 
   def webcast
     @message = Message.new
+    if cookies[:user_choice] == 'yes'
+      redirect_to home_path
+    end  
   end
   
   def preregistration
