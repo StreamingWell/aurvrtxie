@@ -1,5 +1,10 @@
 Openmicrosite::Application.routes.draw do
 
+  # Home if logged in
+  authenticated :user do
+    root :to => redirect('/webcast')
+  end
+
   # Home
   root :to => 'pages#webcast'
 
