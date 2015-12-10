@@ -10,10 +10,7 @@ class PagesController < ApplicationController
   end
 
   def webcast
-    @message = Message.new
-    if cookies[:user_choice] == 'yes'
-      redirect_to home_path
-    end  
+    @message = Message.new  
   end
   
   def preregistration
@@ -22,6 +19,12 @@ class PagesController < ApplicationController
   def evaluation
     @feedback = Feedback.new
   end
+
+  def landing
+    if cookies[:user_choice] == 'yes'
+      redirect_to home_path
+    end
+  end 
 
   protected
 

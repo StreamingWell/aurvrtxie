@@ -14,7 +14,7 @@ Openmicrosite::Application.routes.draw do
 
   # Static pages
   get 'landing' => 'pages#landing'
-  get 'home' => 'pages#home'
+  match 'home' => 'pages#home', via: [:get, :post]
   get 'register' => 'pages#register'
   get 'about' => 'pages#about'
   get 'api' => 'pages#api'
