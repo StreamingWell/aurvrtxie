@@ -157,18 +157,18 @@ li {
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #00a6b6 !important;
+    color: #fff !important;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;   
     letter-spacing: 0.2em;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-    color: #00a6b6;
+    color: #fff;
 }
 
 .navbar-default .navbar-nav > li > a:focus {
-    color: #00a6b6;
+    color: #fff;
 }
 
 .navbar-default .navbar-brand {
@@ -307,6 +307,7 @@ li {
     border-color: #ffffff;
     padding: 5px 40px;
     margin-top: -7.5px;
+    font-size: 12px;
 }
 
 .btn-logout:hover {
@@ -315,6 +316,7 @@ li {
     border-color: #ffffff;
     padding: 5px 40px;
     margin-top: -7.5px;
+    font-size: 12px;
 }
 
 .btn-logout:focus {
@@ -323,6 +325,7 @@ li {
     border-color: #ffffff;
     padding: 5px 40px;
     margin-top: -7.5px;
+    font-size: 12px;
 }
 
 .jumbotron {
@@ -618,7 +621,7 @@ li {
 }
 
 .orkambi-disclaimer {
-    padding: 75px 50px 25px 50px;
+    padding: 50px 50px 25px 50px;
 }
 
 .modal-dialog {

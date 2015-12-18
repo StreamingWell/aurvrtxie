@@ -1,0 +1,22 @@
+<% if user_signed_in? %>
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="orkambi-banner">
+      <div class="col-sm-6 col-sm-offset-3" style="text-align: center;">
+        <p style="font-size: 14px; margin-bottom: 15px;">This website is intended for healthcare professionals only</p>
+      </div>
+      <div class="col-sm-3">
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'btn btn-logout' %>
+      </div>
+    </div>
+  </div>
+</div>
+<% else %>
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="orkambi-banner">
+      <p style="font-size: 14px;">This website is intended for healthcare professionals only</p>
+    </div>
+  </div>
+</div>
+<% end %>
