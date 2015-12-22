@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   attr_accessible :firstname, :lastname, :email, :future
 
   validates :firstname, :lastname, :email, :presence => true
+  validates :email, uniqueness: { :message => "You have already registered for this webcast." }
 
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 
