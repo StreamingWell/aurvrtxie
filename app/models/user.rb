@@ -7,10 +7,10 @@ class User < ActiveRecord::Base
   validates :firstname, :lastname, :email, :presence => true
   validates :email, uniqueness: { :message => "You have already registered for this webcast." }
 
-  validates_format_of :firstname, :with => /\A([a-zA-Z])\z/i,
+  validates_format_of :firstname, :with => /^[A-Za-z_@'-]+$/,
     message: "Please enter your first name"
 
-  validates_format_of :lastname, :with => /\A([a-zA-Z])\z/i, 
+  validates_format_of :lastname, :with => /^[A-Za-z_@'-]+$/, 
     message: "Please enter your last name"
 
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
