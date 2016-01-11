@@ -33,6 +33,8 @@
                 <p></p>
                 <br />
 
+            <%= form.input "firstname", as: :hidden, :input_html =>  {value: current_user.firstname} %>
+            <%= form.input "lastname", as: :hidden, :input_html =>  {value: current_user.lastname} %>
             <%= form.input "email", as: :hidden, :input_html =>  {value: current_user.email} %>
             
             <div class="col-md-4" style="padding:0px;">

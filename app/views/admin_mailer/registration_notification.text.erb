@@ -3,9 +3,9 @@ New notification alert
 
 The following user just registered:
 
-First Name: <%= @user.firstname %>
+First Name: <%= raw @user.firstname %>
 
-Last Name: <%= @user.lastname %>
+Last Name: <%= raw @user.lastname %>
 
 Email: <%= @user.email %>
 

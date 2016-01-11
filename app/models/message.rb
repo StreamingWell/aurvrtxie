@@ -4,7 +4,7 @@ class Message
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-  attr_accessor :name, :email, :hospital, :body
+  attr_accessor :firstname, :lastname, :email, :hospital, :body
 
   validates :hospital, :body, :presence => true
 

@@ -1,7 +1,7 @@
 class NotificationsMailer < ActionMailer::Base
-  default :from => "noreply@orkambi.com"
+  default :from => "branden.mittra@streamingwell.com"
   default :to => "branden.mittra@streamingwell.com"
-  # default :bcc => "branden.mittra@streamingwell.com"
+  default :bcc => "branden.mittra@streamingwell.com"
 
   def new_message(message, user)
     @user = user
