@@ -1,6 +1,6 @@
 <%= render 'layouts/header' %>
 <div class="orkambi-body">
-  <div class="conatiner">
+  <div class="container">
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
         <h1 style="color:#fc6719; margin-top: 25px;"><strong>Register</strong></h1>
@@ -10,6 +10,16 @@
     </div>
     <div class="row">
       <div class="col-md-12">
+
+        <!-- flash_notice to show if form submission is successful -->
+                <div class="alert alert-success" id="form-success" style="display: none; margin-top: 15px; margin-bottom: 0px;">
+                    <strong>Success</strong>
+                </div>
+                <!-- flash_notice to show if form submission is unsuccessful -->
+                <div class="alert alert-error" id="form-error" style="display: none; margin-top: 15px; margin-bottom: 0px;">
+                    <strong>Fail</strong>
+                </div>
+
         <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
           <div class="row">
             <div class="col-sm-6">
@@ -32,7 +42,7 @@
         <hr style="border-color: #fff;">      
         <small>Vertex Pharmaceuticals (Europe) Ltd. values and respects your privacy. Your email address will be used for registration and login purposes only and will be stored in the company's secure database. Vertex Pharmaceuticals (Europe) Ltd. will not share your email address with any third parties.</small>  
         <br />     
-        <fieldset class="col-md-4" style="padding: 0; margin-top: 25px;">
+        <fieldset class="col-sm-4" style="padding: 0; margin-top: 25px;">
           <%= f.button :submit, "ACCESS WEBCAST", class: 'btn btn-primary btn-large btn-block' %>
         </fieldset>
         <% end %>
