@@ -2,9 +2,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :timeoutable, :trackable#, :validatable
 
-  attr_accessible :firstname, :lastname, :email, :future
+  attr_accessible :firstname, :lastname, :email, :hospital, :future
 
-  validates :firstname, :lastname, :email, :presence => true
+  validates :firstname, :lastname, :email, :hospital, :presence => true
   validates :email, uniqueness: { :message => "You have already registered for this webcast." }
 
   validates_format_of :firstname, :with => /^[A-Za-z_@'-]+$/,
@@ -12,6 +12,9 @@ class User < ActiveRecord::Base
 
   validates_format_of :lastname, :with => /^[A-Za-z_@'-]+$/, 
     message: "Please enter your last name"
+
+  validates_format_of :hospital, :with => /^[A-Za-z_@'-]+$/, 
+    message: "Please enter your hospital/institution"
 
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
     message: "Please enter a valid email address"
