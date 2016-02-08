@@ -13,7 +13,7 @@ $(document).ready(function(){
         </div>
         <div class="col-md-12" align="center" style="margin: 25px 0 50px 0;">
           <div class="col-sm-3 col-sm-offset-3">
-            <%= link_to 'YES', home_path, class: "btn btn-primary btn-large btn-block" %>
+            <%= link_to 'YES', home_path(:choice => 'yes'), method: :post, class: "btn btn-primary btn-large btn-block" %>
           </div>
           <div class="col-sm-3">
             <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large btn-block">NO</a>
