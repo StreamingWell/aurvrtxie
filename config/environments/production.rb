@@ -69,5 +69,5 @@ Openmicrosite::Application.configure do
   config.action_mailer.default_url_options = { :host => 'http://agile-ravine-6437.herokuapp.com/' }
 
   # replace this with your tracker code
-  GA.tracker = "UA-XXXXXX-1"
+  GA.tracker = "UA-73596362-1"
 end
