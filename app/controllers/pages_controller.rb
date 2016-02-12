@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
    #remove this before deploying to production
-   before_filter :authenticate
+   #before_filter :authenticate
 
   def home
     if params[:choice] == 'yes'
@@ -28,10 +28,10 @@ class PagesController < ApplicationController
 
   protected
 
-    def authenticate
-      authenticate_or_request_with_http_basic do |username, password|
-      username == "admin" && password == "belfast"
-     end
-    end
+  # def authenticate
+  #    authenticate_or_request_with_http_basic do |username, password|
+  #    username == "admin" && password == "belfast"
+  #   end
+  #  end
 
 end
