@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   validates_format_of :lastname, :with => /^[A-Za-z _@'-]+$/, 
     message: "Please enter your last name"
 
-  validates_format_of :hospital, :with => /^[A-Za-z _@'-]+$/, 
+  validates_presence_of :hospital, 
     message: "Please enter your hospital/institution"
 
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
